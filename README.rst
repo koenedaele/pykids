@@ -1,8 +1,8 @@
-Programmeren in Python voor Mira
-================================
+Programmeren in Python
+======================
 
 Deze repository bevat uitleg over programmeren in Python en werken met de Linux
-commandline. De lessen zijn gemaakt op maat voor Mira, maar iedereen die er iets
+commandline. De lessen zijn gemaakt op maat voor mijn kinderen, maar iedereen die er iets
 aan heeft mag met de inhoud doen wat ze willen.
 
 Enkele veronderstellingen:
