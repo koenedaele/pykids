@@ -30,7 +30,7 @@ maken. Normaal heb je een blinkende cursor staan naast een `$`.
 
 Om te beginnen testen we een commando waar geen argumenten voor nodig zijn. Voer
 het commando `pwd` uit. Dit doe je door `pwd` in te tikken, gevolgd door de
-`enter` toest.
+`enter` toets.
 
 ```bash
 $ pwd
@@ -47,7 +47,7 @@ er zijn er een aantal die standaard aanwezig zijn. Eentje daar van is `/home`.
 Dit is een tak waaronder iedereen zijn persoonlijke zaken kan opslaan. Een tak
 van deze boom noemen we ook een map of folder. In de map `/home` heeft elke
 gebruiker die de computer gebruikt een eigen map. Dus, er zijn mappen zoals
-`/home/mira`, `/home/koen`, `/home/lena`, `/home/mira`, ... De computer is dus
+`/home/mira`, `/home/koen`, `/home/lena`, `/home/jef`, ... De computer is dus
 een boom waaraan een grote tak hangt die we `home` noemen. Van hieruit ontstaan
 er kleinere takken die we `mira`, `lena`, `koen`, ... noemen. En daarbinnen
 kunnen we weer extra takken aanmaken.
@@ -70,7 +70,8 @@ Nu zien we alle bestanden in onze eigen `home` directory. We zien zowel
 bestanden als andere mappen. Afhankelijk van hoe je CLI is ingesteld kan het
 zijn dat je de mappen in een ander kleur ziet dan de gewone bestanden. Je kunt
 het ls commando ook toepassen op een andere map. Dit doe je door na het commando
-de map op te geven.
+de map op te geven. Dit noemen we ook wel een `argument` dat we aan het commando
+doorgeven. Het commando zegt wat er moet gedaan worden, het argument waarmee.
 
 ```bash
 $ ls projecten
@@ -85,8 +86,8 @@ $ touch projecten/test.txt
 ```
 
 Dit wil zeggen: maak een leeg bestand met de naam test.txt aan in de map
-projecten.
-
+projecten. Hier is het commando dus `touch` en het argument is
+`projecten/test.txt`.
 
 Je kunt een map of bestand op verschillende manieren opgeven. De simpelste
 manier is om gewoon een naam van een bestand of map op te geven. Op dat moment
@@ -117,3 +118,56 @@ relatieve paden. Als het pad start vanaf de root, dan noemen we het een absoluut
 pad. Je kunt zo'n pad herkennen aan het feit dat het start met `/`. Dus, `/`,
 `/home`, `/home/mira`, .. zijn allemaal absolute paden.
 
+Een speciaal pad is het pad `~`. Dit pad stelt altijd jouw eigen home folder
+voor. Dus, afhankelijk van wie je bent zal dit steeds een andere map zijn. Voor
+mij is dit `/home/koen`. Voor jou is dit `/home/mira` of `/home/lena`.
+
+We hebben nu wel een map `projecten` aangemaakt en daar een bestand in gezet,
+maar kunnen we er ook iets in gaan doen? Natuurlijk. Daarvoor gebruiken we het
+commando `cd`. Dit is een afkorting van `change directory` (verander van map).
+Zoals altijd combineer je het commando met een argument. Dit argument moet
+wijzen naar de map waar je heen wil gaan. Zoals we gezien hebben kun je dat op
+heel veel verschillende manieren doen.
+
+Stel dat we in `/home/mira` beginnen.
+
+Ten eerste kunnen we gewoon met de lokale mapnaam werken.
+
+```bash
+$ cd projecten
+$ pwd
+$ cd ~
+```
+
+Als je dit correct uitvoert, ga je eerst naar de map projecten die onder je huidige 
+map hangt. Daarna vraag je aan de computer om het pad van de map af te drukken. 
+Tenslotte ga je terug naar jouw home map.
+
+Ten tweede kunnen we met een absoluut pad werken.
+
+```bash
+$ cd /home/<username>/projecten
+$ pwd
+$ cd ~
+```
+
+Hierbij moet je `<username>` vervangen door je eigen gebruikersnaam. Dus `koen`,
+`jef`, `mira`, ... Je gaat dus rechtstreeks naar je projecten map. Waar het
+commando `cd projecten` enkel werkt als je in de map boven `projecten` staat,
+werkt dit commando waar je ook staat op de computer.
+
+Test dit zelf eens uit.
+
+```bash
+$ cd /
+$ cd projecten
+$ pwd
+$ cd /home/<username>/projecten
+$ pwd
+$ cd ~
+```
+
+De eerste `cd` werkt niet, de tweede wel. Een absoluut pad zal altijd werken,
+maar is meer tikwerk. Een relatief pad zal niet altijd werken, maar is wel
+sneller te tikken. Afhankelijk van waar je bent en wat je aan het doen bent is
+het één beter of het ander.
