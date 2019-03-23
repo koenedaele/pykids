@@ -7,7 +7,7 @@ aan heeft mag met de inhoud doen wat ze willen.
 
 Enkele veronderstellingen:
 
- - Je werkt onder Ubuntu Linux
- - Je leert werken met de CLI (Command Line Interface)
- - Je wisselt bestanden uit via GIT
- - Je leert programmeren in Python
+- Je werkt onder Ubuntu Linux
+- Je leert werken met de CLI (Command Line Interface)
+- Je wisselt bestanden uit via GIT
+- Je leert programmeren in Python
